@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luskas Hub | Recursos Úteis</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --card-bg: #0f0f0f;
+            --accent: #00f2ff;
+            --text: #ffffff;
+            --text-dim: #888;
+            --border: rgba(255, 255, 255, 0.05);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            color: var(--text-dim);
+            font-weight: 300;
+        }
+
+        /* Grid de Links */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .link-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 24px;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .link-card:hover {
+                transform: translateY(-8px);
+                border-color: var(--accent);
+                box-shadow: 0 15px 30px rgba(0, 242, 255, 0.1);
+            }
+
+            .link-card h3 {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+
+            .link-card p {
+                margin: 0;
+                color: var(--text-dim);
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        .category {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            opacity: 0.6;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: auto;
+            padding-top: 60px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .github-btn {
+            text-decoration: none;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+            .github-btn:hover {
+                color: var(--accent);
+                border-color: var(--accent);
+            }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Luskas Hub</h1>
+        <p>Juntei só os melhores aqui pra você!</p>
+    </div>
+
+    <div class="links-grid">
+        <!-- ORIGINAIS -->
+        <a href="https://luskas-calc.vercel.app" target="_blank" class="link-card">
+            <span class="category">Productivity</span>
+            <h3>Luskas Calc</h3>
+            <p>Calculadora minimalista com design glassmorphism e funções completas.</p>
+        </a>
+
+        <a href="https://github.com" target="_blank" class="link-card">
+            <span class="category">Development</span>
+            <h3>GitHub</h3>
+            <p>Onde o mundo constrói software. Hospede e revise códigos aqui.</p>
+        </a>
+
+        <a href="https://canva.com" target="_blank" class="link-card">
+            <span class="category">Design</span>
+            <h3>Canva</h3>
+            <p>Crie designs impressionantes de forma simples e rápida.</p>
+        </a>
+
+        <a href="https://chatgpt.com" target="_blank" class="link-card">
+            <span class="category">AI Tools</span>
+            <h3>ChatGPT</h3>
+            <p>Inteligência artificial para auxiliar em textos, códigos e ideias.</p>
+        </a>
+
+        <a href="https://trello.com" target="_blank" class="link-card">
+            <span class="category">Management</span>
+            <h3>Trello</h3>
+            <p>Organize seus projetos e tarefas em quadros visuais e intuitivos.</p>
+        </a>
+
+        <a href="https://stackoverflow.com" target="_blank" class="link-card">
+            <span class="category">Community</span>
+            <h3>Stack Overflow</h3>
+            <p>A maior comunidade de desenvolvedores para aprender e compartilhar.</p>
+        </a>
+
+        <!-- ADICIONADOS -->
+        <a href="https://youtube.com" target="_blank" class="link-card">
+            <span class="category">Streaming</span>
+            <h3>YouTube</h3>
+            <p>Assista a vídeos, clipes musicais e transmissões ao vivo em 4K.</p>
+        </a>
+
+        <a href="https://poki.com.br" target="_blank" class="link-card">
+            <span class="category">Instant Play</span>
+            <h3>Poki</h3>
+            <p>A melhor seleção de jogos online grátis para jogar no navegador.</p>
+        </a>
+
+        <a href="https://xbox.com/pt-br/play" target="_blank" class="link-card">
+            <span class="category">Cloud Gaming</span>
+            <h3>Xbox Cloud</h3>
+            <p>Jogue títulos de console via nuvem diretamente no seu PC ou celular.</p>
+        </a>
+    </div>
+
+    <div class="footer">
+        <a href="https://github.com/luskasdev" target="_blank" class="github-btn">
+            Desenvolvido por luskasdev
+        </a>
+    </div>
+
+</body>
+</html>
